@@ -30,7 +30,7 @@
 			</li>
 			<li>
 				<a href="#">대분류2</a>
-				<ul class="sub-menu">
+				<ul class="menu-sub">
 					<li><a href="#">소분류3</a></li>
 					<li><a href="#">소분류4</a></li>
 				</ul>
@@ -40,5 +40,22 @@
 </div>
 
 
+
+<script>
+	const sub = document.querySelectorAll(".menu-sub");
+	sub.forEach(function(e){
+		e.previousElementSibling.addEventListener("click",function(){
+			alert("gd");
+		});
+	});
+	
+// 	const menus = document.querySelectorAll(".menu-main a");
+// 	menus.forEach(function(e){
+// 		e.addEventListener("click",function(){
+// 			e.classList.remove("click");
+// 			e.classList.toggle("click");
+// 		});
+// 	});
+</script>
 </body>
 </html>

@@ -24,8 +24,11 @@
 .logo-zone a:nth-child(1) {
 	padding-left: 30px;
 }
+.logo-zone a:nth-child(2){
+	color: #00a6ed;
+}
 .logo-zone a:nth-child(2):hover {
-	color:#00a6ed;
+	color:#fff;
 }
 
 
@@ -38,3 +41,10 @@
 .menu-zone a:hover{color: #9e9e9e;}
 .menu-zone .menu-main>li>a{ display: inline-block; font-weight: bold; margin-top: 5px;}
 .menu-zone .menu-main>li>ul>li>a{ padding-left: 20px; }
+
+
+
+.menu-main .menu-sub{display: none;}
+.menu-main .menu-sub.on{display: block;}
+.menu-main .click{color:gold;}
+
