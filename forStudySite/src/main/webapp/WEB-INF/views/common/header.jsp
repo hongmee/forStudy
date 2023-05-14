@@ -5,6 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>header</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="/resources/css/header.css">
 </head>
 <body>
