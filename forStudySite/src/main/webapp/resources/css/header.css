@@ -1,0 +1,13 @@
+@import './reset.css';
+
+.left-side{
+	position: fixed;
+	height: 100%;
+	width: 250px;
+	background: #464646;
+	top:0;
+	left:0;
+}
+.left-side a{
+	color:#fff;
+}
