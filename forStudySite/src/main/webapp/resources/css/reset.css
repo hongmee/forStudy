@@ -47,6 +47,59 @@ table {
 
 /*==========================================================*/
 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {-webkit-appearance:none;margin:0;}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-text-fill-color: #000;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+input:autofill,
+input:autofill:hover,
+input:autofill:focus,
+input:autofill:active {
+	-webkit-text-fill-color: #000;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+input:focus {outline:none;}
+
+
+.btn {cursor:pointer;margin:0;border-width:1px;border-style:solid;display:block;border-radius:4px;min-width:48px;min-height:28px;transition:opacity 0.3s;}
+.btn:hover {opacity:0.8;}
+.btn.size01 {padding:8px 12px; font-size:14px;}
+.btn.size02 {padding:12px 24px; font-size:16px;}
+.btn.size03 {padding:18px 36px; font-size:18px;}
+
+
+/*==========================================================*/
+
+
+:root{
+    --bg-dim:rgba(23, 25, 26, 0.1);
+	--shadow:0px 2px 6px rgba(0, 0, 0, 0.1), 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*==========================================================*/
+
+
+
 a{text-decoration: none;}
-html,body{height: 100%; width: calc(100%-250px);}
-body {padding-left: 280px;}
+html,body{height: 100%;}
+body {position: relative; width: calc(100% - 250px); padding-left: 250px; overflow-x: hidden;}
+.content{width: 100%; padding-left: 30px;}
+
+#modal-ground{display:none; background: var(--bg-dim); width: calc(100% - 250px); height: 100%; position: absolute; top:0; align-items: center; justify-content: center;}
+#modal-content{background: #fff; border-radius: 5px; box-shadow: var(--shadow); padding: 40px; border: 1px solid #f1f1f1;text-align: center; position: relative;}
+#modal-content>.close{position: absolute;right: 3px; top:3px; cursor: pointer;}
+
+
+
