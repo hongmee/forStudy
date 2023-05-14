@@ -7,7 +7,6 @@
 	background: #464646;
 	top:0;
 	left:0;
-	padding: 20px 0;
 }
 .left-side a{ color:#fff; }
 
@@ -19,7 +18,7 @@
 	font-size: 40px;
 	font-family: 'Sedgwick Ave', cursive;
 	line-height: 35px;
-	margin-bottom: 30px;
+	margin: 50px 0;
 }
 .logo-zone a:nth-child(1) {
 	padding-left: 30px;
@@ -36,5 +35,5 @@
 	line-height: 28px;
 }
 .menu-zone a:hover{color: #9e9e9e;}
-.menu-zone .menu-main>li>a{ font-weight: bold;}
+.menu-zone .menu-main>li>a{ display: inline-block; font-weight: bold; margin-top: 5px;}
 .menu-zone .menu-main>li>ul>li>a{ padding-left: 20px; }
