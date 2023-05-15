@@ -3,9 +3,17 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:tx="http://www.springframework.org/schema/tx"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.3.xsd
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
@@ -21,6 +29,44 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	
+	<!-- DB 접속정보를 저장하는 객체 -->
+	<beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<beans:property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+		<beans:property name="username" value="janetStudy" />
+		<beans:property name="password" value="8888" />
+	</beans:bean>
+	
+	<!-- mybatis 설정 객체 -->
+<!-- 	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean"> -->
+<!-- 		<beans:property name="dataSource" ref="dataSource" /> -->
+<!-- 		<beans:property name="configLocation" value="classpath:mybatis-config.xml" /> -->
+<!-- 		<beans:property name="mapperLocations" value="classpath:/mapper/*SQL.xml" /> -->
+<!-- 	</beans:bean> -->
+	
+	<!-- DB작업을 수행하는 객체 -->
+<!-- 	<beans:bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate"> -->
+<!-- 		<beans:constructor-arg ref="sqlSession"></beans:constructor-arg> -->
+<!-- 	</beans:bean> -->
+	
+	<!-- 트랜젝션 관리 객체 생성 -->
+	<beans:bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	<!-- @Transactional 어노테이션 사용 설정 -->
+	<tx:annotation-driven/>
+	
+	
+	<!-- AOP annotation설정 활성화 -->
+	<aop:aspectj-autoproxy />
+	<!-- 예약작업 어노테이션 설정 활성화 -->
+	<task:annotation-driven/>
+	
+	
+	
+	
+	<context:component-scan base-package="common" />
 	<context:component-scan base-package="kr.ong.mee" />
 	
 	

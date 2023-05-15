@@ -4,11 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Janet's Box</title>
+<title>mybatis</title>
 </head>
 <body>
-	<script>
-		location.href="/main.do";
-	</script>
+<jsp:include page="/WEB-INF/views/common/header.jsp" />	
+
+	<div class="content">
+		<h1>Mybatis</h1>
+		
+
+	</div>
+
 </body>
 </html>

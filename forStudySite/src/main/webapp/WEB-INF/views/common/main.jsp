@@ -7,8 +7,13 @@
 <title>Janet's Box</title>
 </head>
 <body>
-	<script>
-		location.href="/main.do";
-	</script>
+<jsp:include page="/WEB-INF/views/common/header.jsp" />	
+
+	<div class="content">
+		<h1>홍미의 공부용 사이트입니다</h1>
+		
+	</div>
+	
+	
 </body>
 </html>

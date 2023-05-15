@@ -13,7 +13,6 @@
 </head>
 <body>
 
-
 <div class="left-side">
 	<div class="logo-zone">
 		<a href="/info.do">🐳</a>
@@ -29,10 +28,10 @@
 				</ul>
 			</li>
 			<li>
-				<a href="#">대분류2</a>
+				<a href="#">Spring</a>
 				<ul class="menu-sub">
 					<li><a href="#">소분류3</a></li>
-					<li><a href="#">소분류4</a></li>
+					<li><a href="/mybatis.do">mybatis</a></li>
 				</ul>
 			</li>
 		</ul><!-- main-menu -->
@@ -42,12 +41,18 @@
 
 
 <script>
+
 	const sub = document.querySelectorAll(".menu-sub");
+	let index;
 	sub.forEach(function(e){
 		e.previousElementSibling.addEventListener("click",function(){
 			e.classList.toggle("on");
+			onSub = document.querySelectorAll(".on");
+			onSub.forEach(function(i){
+			})
+			
 		});
-	});
+	}); // 아코디언 메뉴
 
 	const menus = document.querySelectorAll(".menu-sub a");
 	menus.forEach(function(e){
@@ -58,7 +63,7 @@
 			});
 			e.classList.add("click");
 		});
-	});
+	}); // 클릭한 소분류에 노란색 칠해주는 기능
 </script>
 </body>
 </html>

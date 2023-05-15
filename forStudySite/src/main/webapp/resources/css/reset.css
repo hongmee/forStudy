@@ -95,7 +95,11 @@ input:focus {outline:none;}
 a{text-decoration: none;}
 html,body{height: 100%;}
 body {position: relative; width: calc(100% - 250px); padding-left: 250px; overflow-x: hidden;}
-.content{width: 100%; padding-left: 30px;}
+.content{width: 100%; padding-left: 30px; padding-top: 20px;}
+
+.content h1{margin-bottom: 20px;}
+.content p{margin-bottom: 10px;}
+
 
 #modal-ground{display:none; background: var(--bg-dim); width: calc(100% - 250px); height: 100%; position: absolute; top:0; align-items: center; justify-content: center;}
 #modal-content{background: #fff; border-radius: 5px; box-shadow: var(--shadow); padding: 40px; border: 1px solid #f1f1f1;text-align: center; position: relative;}
