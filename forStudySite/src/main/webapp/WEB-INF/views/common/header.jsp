@@ -48,21 +48,15 @@
 			e.classList.toggle("on");
 		});
 	});
-	
-	const menus = document.querySelectorAll(".menu-main a");
+
+	const menus = document.querySelectorAll(".menu-sub a");
 	menus.forEach(function(e){
 		e.addEventListener("click",function(){
-			const white = document.querySelectorAll(".menu-main a");
+			const white = document.querySelectorAll(".menu-sub a");
 			white.forEach(function(w){
-				if(!e.classList.contains("click")){
-					w.classList.remove("click");
-				}
+				w.classList.remove("click");
 			});
-			if(e.nextElementSibling!=null && !e.nextElementSibling.classList.contains("on")){
-				e.classList.remove("click")
-			}else{
-				e.classList.toggle("click");
-			}
+			e.classList.add("click");
 		});
 	});
 </script>
