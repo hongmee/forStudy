@@ -39,16 +39,15 @@
 	</beans:bean>
 	
 	<!-- mybatis 설정 객체 -->
-<!-- 	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean"> -->
-<!-- 		<beans:property name="dataSource" ref="dataSource" /> -->
-<!-- 		<beans:property name="configLocation" value="classpath:mybatis-config.xml" /> -->
-<!-- 		<beans:property name="mapperLocations" value="classpath:/mapper/*SQL.xml" /> -->
-<!-- 	</beans:bean> -->
-	
+	<beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource" />
+		<beans:property name="configLocation" value="classpath:mybatis-config.xml" />
+		<beans:property name="mapperLocations" value="classpath:/mapper/*SQL.xml" />
+	</beans:bean>
 	<!-- DB작업을 수행하는 객체 -->
-<!-- 	<beans:bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate"> -->
-<!-- 		<beans:constructor-arg ref="sqlSession"></beans:constructor-arg> -->
-<!-- 	</beans:bean> -->
+	<beans:bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<beans:constructor-arg ref="sqlSession"></beans:constructor-arg>
+	</beans:bean>
 	
 	<!-- 트랜젝션 관리 객체 생성 -->
 	<beans:bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
