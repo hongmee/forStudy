@@ -1,0 +1,3 @@
+header{background:#FFFAF0; height: 30px; display: flex; align-items: center; justify-content: flex-end;}
+header>a{margin-right: 10px;}
+header>a:hover{color: #f0f0f0;}
