@@ -9,4 +9,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class User {
 	private int userNo;
+	private String userId;
+	private String userPw;
+	private String userNick;
+	private String userPick;
+	private int userQue;
+	private String userAns;
+	private int userStatus;
 }
